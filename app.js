@@ -4,6 +4,13 @@ app.listen(8080, () => {
  console.log("Server running on port 3000");
 });
 
+app.get("/test", req, res) => {
+ callAPIServerCustomers() {
+      fetch("https://api.ocbc.com:8243/accounts/savings/1.0")
+      .then(res => res.text())
+      .then(res => this.setState({ customers: JSON.parse(res) }))
+      .catch(err => err);
+
 app.get("/", (req, res) => {
  res.send(["Hello!"]);
 });
